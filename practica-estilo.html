@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <!-- CSS: Hojas de estilo en cascada -->
+  <!-- Selector: {} -->
+  <!-- ¿Que es un selector? = a quien le afecta los atributos estilos -->
+  <!-- etiqueta {}, .unaclase{}, #identificador{}. *{} Le afecta a todos -->
+  <style>
+    *{
+      margin: 0;
+      padding: 0;
+      border: 0;
+    }
+
+    /*Solo se puede usar una vez*/
+    #titulo{
+      color: black;
+      text-align: center;
+      text-transform: uppercase; /* Convierte en mayusculas */
+      font-weight: bold; /* Negrita */
+    }
+
+    /* Le afecta a todas las etiquetas <p> */
+    p{
+      color:red; 
+      text-align: center;
+      font-style: italic;
+      margin-top: 2em; /* 1em = 16px = 1M */
+      margin-bottom: 4em;
+    }
+    
+    /* Clse que puede heredarse muchas veces */
+    .importante{
+      background-color: bisque;
+      border: 10px dashed green (14, 14, 225); /* Ancho, estilo de border y color del borde */ /* dotted, solid, double, dashed */
+      padding: 1em; /* Espacio interno */
+    }
+
+    .caja{
+      background-color: aquamarine;
+      display: inline-block; /* display = mostrar */
+      height: 60px;
+      padding-top: 40px;
+      text-align: center;
+      width: 100px;
+    }
+
+    .fondoimg{
+      background-image: url('./images/goku_normal.webp');
+      background-size: cover;
+      background-position: center;
+    }
+    
+    </style>
+
+    <h1 id="titulo">Fundamentos CSS</h1>
+
+<!-- atributos: valor; atributo: valor -->
+  <p class="importante">
+    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Soluta, eligendi facere, blanditiis, similique sed molestiae
+    distinctio dolore aperiam tempora voluptates voluptas beatae consectetur excepturi ab accusamus commodi vel. 
+    Quis, voluptate!
+  </p>
+  <p>
+    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Soluta, eligendi facere, blanditiis, similique sed molestiae
+    distinctio dolore aperiam tempora voluptates voluptas beatae consectetur excepturi ab accusamus commodi vel. 
+    Quis, voluptate!
+  </p>
+  <p class="importante fondoimg">
+    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Soluta, eligendi facere, blanditiis, similique sed molestiae
+    distinctio dolore aperiam tempora voluptates voluptas beatae consectetur excepturi ab accusamus commodi vel. 
+    Quis, voluptate!
+  </p>
+
+  <hr> <!-- Linea horizontal -->
+  <br> <!-- Salto de linea -->
+
+  <div class="caja">
+    Caja 1
+  </div>
+  <div class="caja">
+    Caja 2
+  </div>
+</body>
+</html>

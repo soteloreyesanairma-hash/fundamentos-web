@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="./css/estilos-formularios.css">
+</head>
+<body>
+  <form class="formulario">
+    <div class="form-grid">
+        <div class="form-grupo">
+            <label for="codigo">Código<span class="obligatorio">*</span></label>
+            <input type="text" id="codigo" name="codigo" class="form-control" placeholder="Ingrese el código">
+        </div>
+        <div class="form-grupo">
+            <label for="periodo">Periodo</label>
+            <select id="periodo" class="form-select">
+                <option value="">Seleccione...</option>
+                <option value="2024">2024</option>
+                <option value="2025">2025</option>
+                <option value="2026">2026</option>
+            </select>
+        </div>
+        <div class="form-grupo ancho-completo">
+            <label for="descripcion">Descripción</label>
+            <input type="text" id="descripcion" name="descripcion" class="form-control" placeholder="Descripción del indicador">
+        </div>
+    </div>
+    <div class="form-botones">
+        <button type="submit" class="btn btn-primary">Guardar</button>
+        <button type="reset" class="btn btn-secondary">Limpiar</button>
+    </div>
+  </form>
+</body>
+</html>

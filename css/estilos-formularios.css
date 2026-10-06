@@ -1,0 +1,495 @@
+/* =========================================================
+   FORMULARIOS — ESTILO PLANO Y ELEGANTE
+   ========================================================= */
+
+/* Variables de diseño */
+:root {
+    --form-primary: #1f4e78;
+    --form-primary-hover: #163a5c;
+    --form-focus: #1976d2;
+    --form-focus-bg: #f3f9ff;
+
+    --form-border: #cfd6dc;
+    --form-border-hover: #9da9b3;
+
+    --form-text: #333333;
+    --form-label: #46515a;
+    --form-placeholder: #8b969f;
+
+    --form-bg: #ffffff;
+    --form-page-bg: #f5f7f9;
+
+    --form-success: #198754;
+    --form-danger: #dc3545;
+
+    --form-radius: 5px;
+    --form-transition: 0.18s ease;
+}
+
+
+/* =========================================================
+   CONTENEDOR DEL FORMULARIO
+   ========================================================= */
+
+.formulario {
+    width: 100%;
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 24px;
+    background: var(--form-bg);
+    border: 1px solid #e0e5e9;
+    border-radius: 6px;
+    box-sizing: border-box;
+}
+
+
+/* =========================================================
+   GRUPOS DE CAMPOS
+   ========================================================= */
+
+.form-grupo {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 18px;
+}
+
+.form-grupo:last-child {
+    margin-bottom: 0;
+}
+
+
+/* =========================================================
+   ETIQUETAS
+   ========================================================= */
+
+.form-grupo label {
+    margin-bottom: 7px;
+    color: var(--form-label);
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.form-grupo label .obligatorio {
+    color: var(--form-danger);
+    margin-left: 3px;
+}
+
+
+/* =========================================================
+   INPUT TEXT
+   ========================================================= */
+
+.form-control {
+    width: 100%;
+    min-height: 40px;
+    padding: 9px 12px;
+
+    box-sizing: border-box;
+
+    border: 1px solid var(--form-border);
+    border-radius: var(--form-radius);
+
+    background-color: #ffffff;
+    color: var(--form-text);
+
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 14px;
+
+    outline: none;
+
+    transition:
+        border-color var(--form-transition),
+        background-color var(--form-transition),
+        box-shadow var(--form-transition);
+}
+
+
+/* Hover */
+.form-control:hover {
+    border-color: var(--form-border-hover);
+}
+
+
+/* =========================================================
+   PLACEHOLDER
+   ========================================================= */
+
+.form-control::placeholder {
+    color: var(--form-placeholder);
+    opacity: 1;
+}
+
+
+/* =========================================================
+   CONTROL ACTIVO
+   ========================================================= */
+
+.form-control:focus {
+    border-color: var(--form-focus);
+    background-color: var(--form-focus-bg);
+
+    box-shadow:
+        0 0 0 3px rgba(25, 118, 210, 0.12);
+}
+
+
+/* =========================================================
+   SELECT
+   ========================================================= */
+
+.form-select {
+    width: 100%;
+    min-height: 40px;
+
+    padding: 9px 36px 9px 12px;
+
+    box-sizing: border-box;
+
+    border: 1px solid var(--form-border);
+    border-radius: var(--form-radius);
+
+    background-color: #ffffff;
+    color: var(--form-text);
+
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 14px;
+
+    cursor: pointer;
+
+    outline: none;
+
+    transition:
+        border-color var(--form-transition),
+        background-color var(--form-transition),
+        box-shadow var(--form-transition);
+}
+
+.form-select:hover {
+    border-color: var(--form-border-hover);
+}
+
+.form-select:focus {
+    border-color: var(--form-focus);
+    background-color: var(--form-focus-bg);
+
+    box-shadow:
+        0 0 0 3px rgba(25, 118, 210, 0.12);
+}
+
+
+/* =========================================================
+   TEXTAREA
+   ========================================================= */
+
+.form-textarea {
+    width: 100%;
+    min-height: 100px;
+
+    padding: 10px 12px;
+
+    box-sizing: border-box;
+
+    border: 1px solid var(--form-border);
+    border-radius: var(--form-radius);
+
+    background: #ffffff;
+    color: var(--form-text);
+
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 14px;
+
+    resize: vertical;
+    outline: none;
+
+    transition:
+        border-color var(--form-transition),
+        background-color var(--form-transition),
+        box-shadow var(--form-transition);
+}
+
+.form-textarea:focus {
+    border-color: var(--form-focus);
+    background-color: var(--form-focus-bg);
+
+    box-shadow:
+        0 0 0 3px rgba(25, 118, 210, 0.12);
+}
+
+
+/* =========================================================
+   EVENTO ENTER
+   ========================================================= */
+
+/*
+   Esta clase será agregada mediante JavaScript
+   cuando el usuario presione ENTER sobre un control.
+*/
+
+.form-control.enter-activo,
+.form-select.enter-activo,
+.form-textarea.enter-activo {
+    border-color: #0d6efd;
+
+    background-color: #eef7ff;
+
+    box-shadow:
+        0 0 0 3px rgba(13, 110, 253, 0.20),
+        0 0 10px rgba(13, 110, 253, 0.12);
+}
+
+
+/* Indicador visual adicional */
+
+.form-control.enter-activo::after {
+    content: "";
+}
+
+
+/* =========================================================
+   BOTONES
+   ========================================================= */
+
+.form-botones {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+
+    margin-top: 24px;
+}
+
+
+/* Botón base */
+
+.btn {
+    display: inline-flex;
+
+    align-items: center;
+    justify-content: center;
+
+    min-height: 40px;
+
+    padding: 9px 18px;
+
+    border: 1px solid transparent;
+    border-radius: var(--form-radius);
+
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition:
+        background-color var(--form-transition),
+        border-color var(--form-transition),
+        box-shadow var(--form-transition),
+        transform var(--form-transition);
+}
+
+
+/* Botón principal */
+
+.btn-primary {
+    background-color: var(--form-primary);
+    border-color: var(--form-primary);
+    color: #ffffff;
+}
+
+.btn-primary:hover {
+    background-color: var(--form-primary-hover);
+    border-color: var(--form-primary-hover);
+}
+
+.btn-primary:active {
+    transform: translateY(1px);
+}
+
+
+/* Botón secundario */
+
+.btn-secondary {
+    background-color: #ffffff;
+    border-color: #b8c1c8;
+    color: #46515a;
+}
+
+.btn-secondary:hover {
+    background-color: #f1f4f6;
+    border-color: #929da6;
+}
+
+
+/* Botón peligro */
+
+.btn-danger {
+    background-color: var(--form-danger);
+    border-color: var(--form-danger);
+    color: #ffffff;
+}
+
+.btn-danger:hover {
+    background-color: #b02a37;
+}
+
+
+/* =========================================================
+   BOTONES CON FOCUS
+   ========================================================= */
+
+.btn:focus-visible {
+    outline: none;
+
+    box-shadow:
+        0 0 0 3px rgba(25, 118, 210, 0.25);
+}
+
+
+/* =========================================================
+   MENSAJES DE VALIDACIÓN
+   ========================================================= */
+
+.form-ayuda {
+    margin-top: 5px;
+
+    color: #6c757d;
+
+    font-size: 12px;
+}
+
+.form-error {
+    margin-top: 5px;
+
+    color: var(--form-danger);
+
+    font-size: 12px;
+}
+
+.form-exito {
+    margin-top: 5px;
+
+    color: var(--form-success);
+
+    font-size: 12px;
+}
+
+
+/* =========================================================
+   CAMPO CON ERROR
+   ========================================================= */
+
+.form-control.error,
+.form-select.error {
+    border-color: var(--form-danger);
+
+    background-color: #fff8f8;
+}
+
+.form-control.error:focus,
+.form-select.error:focus {
+    box-shadow:
+        0 0 0 3px rgba(220, 53, 69, 0.12);
+}
+
+
+/* =========================================================
+   CAMPOS DESHABILITADOS
+   ========================================================= */
+
+.form-control:disabled,
+.form-select:disabled {
+    background-color: #eef0f2;
+    color: #7d858c;
+
+    cursor: not-allowed;
+
+    opacity: 0.8;
+}
+
+
+/* =========================================================
+   FORMULARIO EN DOS COLUMNAS
+   ========================================================= */
+
+.form-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(2, minmax(0, 1fr));
+
+    gap: 18px;
+}
+
+
+/* Campo que ocupa todo el ancho */
+
+.form-grid .ancho-completo {
+    grid-column: 1 / -1;
+}
+
+
+/* =========================================================
+   RESPONSIVE — TABLETS
+   ========================================================= */
+
+@media (max-width: 768px) {
+
+    .formulario {
+        padding: 18px;
+    }
+
+    .form-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .form-grid .ancho-completo {
+        grid-column: auto;
+    }
+}
+
+
+/* =========================================================
+   RESPONSIVE — CELULARES
+   ========================================================= */
+
+@media (max-width: 480px) {
+
+    .formulario {
+        padding: 14px;
+        border: none;
+        border-radius: 0;
+    }
+
+    .form-grupo {
+        margin-bottom: 15px;
+    }
+
+    .form-control,
+    .form-select {
+        min-height: 44px;
+        font-size: 16px;
+    }
+
+    .form-botones {
+        flex-direction: column;
+    }
+
+    .btn {
+        width: 100%;
+        min-height: 44px;
+    }
+}
+
+
+/* =========================================================
+   REDUCCIÓN DE ANIMACIONES
+   ========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+    .form-control,
+    .form-select,
+    .form-textarea,
+    .btn {
+        transition: none;
+    }
+}

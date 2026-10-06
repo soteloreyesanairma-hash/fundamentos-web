@@ -1,0 +1,154 @@
+/* =========================================
+   ESTILO GENERAL DE LA TABLA
+   ========================================= */
+
+.tabla-estadistica {
+    width: 100%;
+    border-collapse: collapse;
+    border-spacing: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 14px;
+    color: #333;
+    background-color: #ffffff;
+    border: 1px solid #d9dee3;
+    border-radius: 6px;
+    overflow: hidden;
+}
+
+/* =========================================
+   ENCABEZADO
+   ========================================= */
+
+.tabla-estadistica thead {
+    background-color: #1f4e78;
+    color: #ffffff;
+}
+
+.tabla-estadistica thead th {
+    padding: 12px 14px;
+    text-align: center;
+    font-weight: 600;
+    border-bottom: 2px solid #163a5c;
+    white-space: nowrap;
+}
+
+/* =========================================
+   CELDAS
+   ========================================= */
+
+.tabla-estadistica td {
+    padding: 10px 14px;
+    border-bottom: 1px solid #e1e5e8;
+    vertical-align: middle;
+}
+
+/* =========================================
+   FILAS CEBREADAS
+   ========================================= */
+
+/* Filas pares */
+.tabla-estadistica tbody tr:nth-child(even) {
+    background-color: #f3f6f9;
+}
+
+/* Filas impares */
+.tabla-estadistica tbody tr:nth-child(odd) {
+    background-color: #ffffff;
+}
+
+/* =========================================
+   EFECTO HOVER
+   ========================================= */
+
+.tabla-estadistica tbody tr {
+    transition: background-color 0.2s ease,
+                box-shadow 0.2s ease;
+}
+
+.tabla-estadistica tbody tr:hover {
+    background-color: #dceeff;
+    box-shadow: inset 4px 0 0 #1976d2;
+    cursor: pointer;
+}
+
+/* =========================================
+   ALINEACIÓN DE DATOS
+   ========================================= */
+
+.tabla-estadistica .texto {
+    text-align: left;
+}
+
+.tabla-estadistica .numero {
+    text-align: right;
+    font-variant-numeric: tabular-nums;
+}
+
+.tabla-estadistica .centrado {
+    text-align: center;
+}
+
+/* =========================================
+   PRIMERA COLUMNA DESTACADA
+   ========================================= */
+
+.tabla-estadistica tbody td:first-child {
+    font-weight: 600;
+    color: #1f4e78;
+}
+
+/* =========================================
+   FILA DE TOTALES
+   ========================================= */
+
+.tabla-estadistica .total {
+    background-color: #e8eef5 !important;
+    font-weight: bold;
+    color: #163a5c;
+    border-top: 2px solid #1f4e78;
+}
+
+.tabla-estadistica .total:hover {
+    background-color: #dce6f0 !important;
+}
+
+/* =========================================
+   VALORES POSITIVOS Y NEGATIVOS
+   ========================================= */
+
+.tabla-estadistica .positivo {
+    color: #198754;
+    font-weight: 600;
+}
+
+.tabla-estadistica .negativo {
+    color: #dc3545;
+    font-weight: 600;
+}
+
+/* =========================================
+   CONTENEDOR RESPONSIVO
+   ========================================= */
+
+.tabla-contenedor {
+    width: 100%;
+    overflow-x: auto;
+    margin: 20px 0;
+    border-radius: 6px;
+}
+
+/* =========================================
+   RESPONSIVE
+   ========================================= */
+
+@media (max-width: 768px) {
+
+    .tabla-estadistica {
+        font-size: 13px;
+    }
+
+    .tabla-estadistica thead th,
+    .tabla-estadistica td {
+        padding: 8px 10px;
+    }
+}
